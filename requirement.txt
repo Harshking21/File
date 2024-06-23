@@ -1,6 +1,5 @@
-
 print("Загрузка модулей не останавливайте код")
-os.system("pip install pyTelegramBotAPI")
-os.system("pip install DDos")
-os.system("chmod +x bgmi"
-os.system("python -m pip install --upgrade pip")
+pip install pyTelegramBotAPI
+pip install DDos
+chmod +x bgmi
+python -m pip install --upgrade pip
